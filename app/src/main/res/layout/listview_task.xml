@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/task_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="123dp"
+    android:orientation="horizontal"
+    android:background="@color/white">
+    <!--user head-->
+    <LinearLayout
+        android:id="@+id/task_list_item_userLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <com.playmate.util.view.CircleImageView
+            android:id="@+id/task_list_item_usrHeaderIcon"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/task_list_item_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/text_unselect"
+            android:layout_gravity="center_horizontal" />
+
+        <include android:id="@+id/task_list_item_sexul"
+            layout="@layout/label_sexul_1"/>
+
+    </LinearLayout>
+
+    <!--mission-->
+    <LinearLayout
+        android:id="@+id/task_list_item_missionLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/task_list_item_taskTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/text_blackGray"
+            android:textSize="19sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/home_icon1" />
+
+            <TextView
+                android:id="@+id/task_list_item_singlePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_price"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/home_icon2" />
+
+            <TextView
+                android:id="@+id/task_list_item_start_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_unselect"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/home_icon3" />
+
+            <TextView
+                android:id="@+id/task_list_item_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_unselect"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--creadit-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/task_list_item_creditScore"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/credit_border"
+            android:gravity="center"
+            android:textColor="@color/text_selected"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/task_list_item_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/task_list_item_creditScore"
+            android:layout_marginBottom="10dp"
+            android:textSize="17sp"
+            android:textColor="@color/text_unselect" />
+
+    </RelativeLayout>
+</LinearLayout>

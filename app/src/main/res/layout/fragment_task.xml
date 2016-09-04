@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/basic_color_gray_1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/basic_color_yellow_1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/fragment_top_location_LinearLayout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_onclick_selector">
+            <TextView
+                android:id="@+id/fragment_top_location_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_blackGray"
+                android:text="广州"/>
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@mipmap/arow_icon2"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/ranking_serchBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:drawableLeft="@mipmap/search_icon"
+            android:background="@drawable/main_searbox_shape"
+            android:focusable="false"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="99dp"
+        android:layout_marginBottom="8dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/fragment_adbanner_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"/>
+
+        <LinearLayout
+            android:id="@+id/fragment_adbanner_show_pointer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+        <RadioGroup
+            android:id="@+id/fragment_sort_rg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/fragment_sort_hot"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:checked="true"
+                android:textSize="15sp"
+                android:background="@drawable/main_sort_textview_selector"
+                android:textColor="@color/text_blackGray"
+                android:text="热门"
+                android:button="@null"/>
+
+            <RadioButton
+                android:id="@+id/fragment_sort_price"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:background="@drawable/main_sort_textview_selector"
+                android:textColor="@color/text_blackGray"
+                android:text="价格"
+                android:button="@null"/>
+
+            <RadioButton
+                android:id="@+id/fragment_sort_distance"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:background="@drawable/main_sort_textview_selector"
+                android:textColor="@color/text_blackGray"
+                android:text="附近"
+                android:button="@null"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/fragment_sort_select"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/main_sort_textview_normal"
+            android:text="筛选"
+            android:textColor="@color/text_blackGray"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+
+    <com.playmate.util.view.LoadMoreListView
+        android:id="@id/android:list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="8dp"/>
+
+</LinearLayout>
