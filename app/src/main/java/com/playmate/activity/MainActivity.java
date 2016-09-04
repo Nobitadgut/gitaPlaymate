@@ -1,6 +1,7 @@
 package com.playmate.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -16,6 +17,8 @@ import com.playmate.util.view.MainNavigateTabBar;
 
 public class MainActivity extends Activity {
 
+    private Activity thisActivity;
+
     private static final String TAG_PAGE_HOME = "首页";
     private static final String TAG_PAGE_FIND = "发现";
     private static final String TAG_PAGE_PUBLISH = "发布";
@@ -30,6 +33,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
+
+        thisActivity = this;
 
         mNavigateTabBar = (MainNavigateTabBar) findViewById(R.id.mainTabBar);
         publish = (ImageButton) findViewById(R.id.ib_public);
@@ -57,7 +62,8 @@ public class MainActivity extends Activity {
     class publishListener implements View.OnClickListener{
         @Override
         public void onClick(View view) {
-            Toast.makeText(getApplicationContext(), "发布", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(thisActivity, PublishTaskActivity.class);
+            startActivity(intent);
         }
     }
 }
