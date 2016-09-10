@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.playmate">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.PublishTaskActivity"/>
+        <activity android:name=".activity.SearchResultActivity" />
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.CompleteDataActivity"/>
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.BaseWebActivity" />
+        <activity android:name=".activity.LocationChooseActivity" />
+        <activity android:name=".activity.TaskDetailActivity" />
+        <activity android:name=".activity.AppointmentActivity"/>
+        <activity android:name=".activity.PayActivity"/>
+    </application>
+
+</manifest>

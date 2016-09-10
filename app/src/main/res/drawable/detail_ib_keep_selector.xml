@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 按下时候的图片 -->
+    <item android:state_pressed="true" android:drawable="@mipmap/keep_icon1" />
+    <item android:state_checked="true" android:drawable="@mipmap/keep_icon1" />
+    <!-- 正常时候的图片 -->
+    <item android:state_pressed="false" android:drawable="@mipmap/keep_icon2" />
+</selector>

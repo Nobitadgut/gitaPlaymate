@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_completeData_ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/basic_color_gray_1"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/activity_completeData_ib_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/text_onclick_selector"
+            android:src="@mipmap/back_icon"
+            android:clickable="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="22sp"
+            android:textColor="@color/text_blackGray"
+            android:text="注册"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="171dp"
+        android:layout_marginBottom="10dp"
+        android:background="@mipmap/reg_bg">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+            <com.playmate.util.view.CircleImageView
+                android:id="@+id/activity_completeData_iv_userIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@mipmap/hd_icon1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:text="上传头像"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:text="为了增加信用度和成效率，请上传个人形象照"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textColor="@color/text_blackGray"
+            android:textSize="19sp"
+            android:text="昵称"/>
+
+        <EditText
+            android:id="@+id/activity_completeData_et_usrName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:background="#00000000"
+            android:textColor="@color/text_inputText"
+            android:textSize="20dp"
+            android:singleLine="true"
+            android:hint="请输入昵称"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textColor="@color/text_blackGray"
+            android:textSize="19sp"
+            android:text="年龄"/>
+
+        <EditText
+            android:id="@+id/activity_completeData_et_birth"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:background="#00000000"
+            android:textColor="@color/text_inputText"
+            android:inputType="date"
+            android:textSize="20dp"
+            android:singleLine="true"
+            android:hint="请选择生日"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textColor="@color/text_blackGray"
+            android:textSize="19sp"
+            android:text="性别"/>
+
+        <RadioGroup
+            android:id="@+id/activity_completeData_rg_genderGroup"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/activity_completeData_rb_male"
+                android:layout_width="67dp"
+                android:layout_height="32dp"
+                android:background="@drawable/radiobutton_sexul_selector"
+                android:gravity="center"
+                android:textColor="@color/text_blackGray"
+                android:textSize="19sp"
+                android:checked="true"
+                android:text="男"
+                android:button="@null"/>
+
+            <RadioButton
+                android:id="@+id/activity_completeData_rb_female"
+                android:layout_width="67dp"
+                android:layout_height="32dp"
+                android:background="@drawable/radiobutton_sexul_selector"
+                android:gravity="center"
+                android:textColor="@color/text_blackGray"
+                android:textSize="19sp"
+                android:text="女"
+                android:button="@null"/>
+        </RadioGroup>
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="2dp"
+            android:background="@mipmap/warning_icon1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/text_blackGray"
+            android:text="注册后不能修改"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"/>
+
+    <Button
+        android:id="@+id/activity_completeData_button_register"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/basic_color_yellow_1"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:text="完成注册" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <CheckBox
+            android:id="@+id/activity_completeData_cb_isread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/checkbox_redbag"
+            android:button="@null"/>
+        <TextView
+            android:id="@+id/activity_completeData_tv_Provision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_blackGray"
+            android:layout_marginLeft="5dp"
+            android:textSize="15sp"
+            android:text="已经阅读并同意《玩伴》条款"/>
+    </LinearLayout>
+
+</LinearLayout>
