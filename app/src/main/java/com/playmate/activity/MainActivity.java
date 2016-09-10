@@ -1,8 +1,10 @@
 package com.playmate.activity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
@@ -14,6 +16,11 @@ import com.playmate.fragment.MeFragment;
 import com.playmate.fragment.MessageFragment;
 import com.playmate.fragment.RankingFragment;
 import com.playmate.util.view.MainNavigateTabBar;
+import com.tencent.android.tpush.XGIOperateCallback;
+import com.tencent.android.tpush.XGPushClickedResult;
+import com.tencent.android.tpush.XGPushManager;
+import com.tencent.android.tpush.common.Constants;
+import com.tencent.android.tpush.service.XGPushService;
 
 public class MainActivity extends Activity {
 
@@ -34,6 +41,8 @@ public class MainActivity extends Activity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
 
+        initXGPush();
+
         thisActivity = this;
 
         mNavigateTabBar = (MainNavigateTabBar) findViewById(R.id.mainTabBar);
@@ -51,6 +60,31 @@ public class MainActivity extends Activity {
         mNavigateTabBar.addTab(MeFragment.class, new MainNavigateTabBar.TabParam(R.mipmap.tab_me1, R.mipmap.tab_me2, TAG_PAGE_PERSON));
 
         mNavigateTabBar.addBundle(bundle);
+    }
+
+    /**初始化信鸽推送*/
+    private void initXGPush(){
+        Context context = getApplicationContext();
+        XGPushManager.registerPush(context);
+        XGPushManager.registerPush(getApplicationContext(),
+                new XGIOperateCallback() {
+                    @Override
+                    public void onSuccess(Object data, int flag) {
+                        Log.w(Constants.LogTag,
+                                "+++ register push sucess. token:" + data);
+
+                    }
+
+                    @Override
+                    public void onFail(Object data, int errCode, String msg) {
+                        Log.w(Constants.LogTag,
+                                "+++ register push fail. token:" + data
+                                        + ", errCode:" + errCode + ",msg:"
+                                        + msg);
+                    }
+                });
+        Intent service = new Intent(context, XGPushService.class);
+        context.startService(service);
     }
 
     @Override

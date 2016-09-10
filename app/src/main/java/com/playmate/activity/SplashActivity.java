@@ -6,9 +6,13 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.playmate.R;
 import com.playmate.util.HttpUtil;
+import com.tencent.android.tpush.XGPushClickedResult;
+import com.tencent.android.tpush.XGPushManager;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -61,6 +65,17 @@ public class SplashActivity extends Activity {
             startActivity(intent);
         }else {
             //connect internet
+        }
+    }
+    @Override
+    protected void onResume() {
+        // TODO Auto-generated method stub
+        super.onResume();
+        XGPushClickedResult click = XGPushManager.onActivityStarted(this);
+        Log.d("TPush", "onResumeXGPushClickedResult:" + click);
+        if (click != null) { // 判断是否来自信鸽的打开方式
+            Toast.makeText(this, "来自信鸽点击" + click.toString(),
+                    Toast.LENGTH_SHORT).show();
         }
     }
 

@@ -28,4 +28,8 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:support-v4:19.0.0'
+    compile files('src/main/libs/android-support-v4.jar')
+    compile files('src/main/libs/jg_filter_sdk_1.1.jar')
+    compile files('src/main/libs/wup-1.0.0.E-SNAPSHOT.jar')
+    compile files('src/main/libs/Xg_sdk_v2.46_20160602_1638.jar')
 }
